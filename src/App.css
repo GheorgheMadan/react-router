@@ -7,7 +7,6 @@
 header {
     background-color: rgb(56, 56, 56);
     height: 100px;
-
 }
 
 header div {
@@ -75,4 +74,26 @@ img {
 .not-found {
     margin-top: 100px;
     font-size: 30px;
+}
+
+section {
+    width: 75%;
+    margin-top: 20px;
+}
+
+section h1 {
+    margin-top: 25px;
+}
+
+footer {
+    height: 100px;
+    background-color: rgb(49, 49, 49);
+}
+
+.pulsante {
+    color: white;
+    background-color: rgb(0, 98, 255);
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
 }

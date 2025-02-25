@@ -9,6 +9,10 @@ import PostsPage from "./pages/PostsPage"
 import AboutPage from "./pages/AboutPage"
 import SeeMorePage from "./pages/SeeMorePage"
 
+// main components
+// PostsCreate.jsx
+import PostsCreate from "./components/mainComponents/PostsCreate";
+
 // CSS
 import './App.css'
 
@@ -18,9 +22,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          {/* QUESTO è IL LAYOUT DI DEFAULT */}
           <Route element={<DefaultLayout />}>
+            {/* LA ROUTE DELLA HOME PAGE */}
             <Route path="/" element={<HomePage />}></Route>
-            <Route path="posts" element={<PostsPage />}></Route>
+            {/* LINK DEI POSTS */}
+            <Route path="/posts" >
+              <Route index element={<PostsPage />}></Route>
+              <Route path="create" element={<PostsCreate />}></Route>
+            </Route>
             <Route path="chiSiamo" element={<AboutPage />}></Route>
             <Route path="scopriDiPiu" element={<SeeMorePage />}></Route>
           </Route>
