@@ -9,7 +9,7 @@ import PostsPage from "./pages/PostsPage"
 import AboutPage from "./pages/AboutPage"
 import SeeMorePage from "./pages/SeeMorePage"
 
-// main components
+// main posts page  components
 // PostsCreate.jsx
 import PostsCreate from "./components/mainComponents/PostsCreate";
 import PostsDetail from "./components/mainComponents/PostsDetail";

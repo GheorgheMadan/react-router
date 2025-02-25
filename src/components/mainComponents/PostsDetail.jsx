@@ -4,8 +4,8 @@ import { useState, useEffect } from 'react';
 // import della parte di ritorno parametro rotta FE
 import { useParams } from "react-router-dom";
 
-// // aggiunta  uso link per paginazione (prev next dettagli)
-// import { Link } from "react-router-dom";
+// aggiunta  uso link per paginazione (prev next dettagli)
+import { Link } from "react-router-dom";
 
 export default function PostsDetail() {
     // destructuring per ritornare l'id (proprietà dell'oggetto param)
@@ -24,10 +24,19 @@ export default function PostsDetail() {
 
     return (
         <>
-            <h1>{post.title}</h1>
-            <img src={post.image} alt={post.title} />
-            <p>{post.content}</p>
-            <span>{post.tags ? post.tags.join(', ') : ''}</span>
+            <section className="container-post">
+                <div className="container-link-chiudi">
+                    <Link to='/posts' className="pulsante">X</Link>
+                </div>
+                <h1>{post.title}</h1>
+                <img src={post.image} alt={post.title} />
+                <p>{post.content}</p>
+                <span>{post.tags ? post.tags.join(', ') : ''}</span>
+                <div>
+                    <Link to={`/posts/${parseInt(id) - 1}`} className='pulsante prev'>-</Link>
+                    <Link to={`/posts/${parseInt(id) + 1} `} className='pulsante next'>+</Link>
+                </div>
+            </section>
         </>
     )
 }

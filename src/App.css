@@ -68,6 +68,7 @@ img {
 .card button {
     background-color: rgb(96, 3, 3);
     border: 1px solid rgb(96, 3, 3);
+    color: white;
     border-radius: 10px;
 }
 
@@ -94,6 +95,30 @@ footer {
     color: white;
     background-color: rgb(0, 98, 255);
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px 8px;
     text-decoration: none;
+}
+
+.container-link-chiudi {
+    margin-top: 10px;
+}
+
+.container-link-chiudi a {
+    background-color: red;
+}
+
+.prev {
+    background-color: red;
+}
+
+.next {
+    background-color: green;
+}
+
+.container-post {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: start;
+    margin-bottom: 30px;
 }

@@ -59,7 +59,7 @@ export default function PostsCreate() {
     return (
         <>
             <section>
-                <Link to='/posts' className="pulsante">Torna indietro</Link>
+                <Link to='/posts' className="pulsante">Chiudi</Link>
                 <h1>Inserisci i dati del nuovo post</h1>
                 {/* con onSubmit richiamo la funzione dell'invio del form */}
                 <form onSubmit={addArticle}>
