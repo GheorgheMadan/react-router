@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // LAYOUT
 import DefaultLayout from "./layouts/DefaultLayout";
@@ -12,7 +12,7 @@ import SeeMorePage from "./pages/SeeMorePage"
 // main components
 // PostsCreate.jsx
 import PostsCreate from "./components/mainComponents/PostsCreate";
-
+import PostsDetail from "./components/mainComponents/PostsDetail";
 // CSS
 import './App.css'
 
@@ -30,6 +30,7 @@ function App() {
             <Route path="/posts" >
               <Route index element={<PostsPage />}></Route>
               <Route path="create" element={<PostsCreate />}></Route>
+              <Route path=":id" element={<PostsDetail />} />
             </Route>
             <Route path="chiSiamo" element={<AboutPage />}></Route>
             <Route path="scopriDiPiu" element={<SeeMorePage />}></Route>

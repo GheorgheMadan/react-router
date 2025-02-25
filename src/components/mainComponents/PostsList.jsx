@@ -86,6 +86,7 @@ export default function PostsList() {
                                 <button onClick={() => deleteArticle(post.id)}>
                                     X
                                 </button>
+                                <Link to={`/posts/${post.id}`} className="pulsante">Mostra di più</Link>
                             </div>
 
                         ))}
